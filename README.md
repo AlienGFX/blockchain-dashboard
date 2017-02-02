@@ -2,10 +2,10 @@ README.md
 
 blockchain.rkweb.fr
 
-1) Clone the git repository.
-2) Install library with composer : php composer.phar install.
-3) Copy config.template.php to config.php.
-4) Replace values config.php to associate him with your blockchain account.
+- Clone the git repository.
+- Install library with composer : php composer.phar install.
+- Copy config.template.php to config.php.
+- Replace values config.php to associate him with your blockchain account.
 
 This library requires the mCrypt, GMP, and cURL and gd extensions to work.
 
