@@ -76,8 +76,8 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Bitcoin</h4>
-                                <p class="category">During last month</p>
+                                <h4 class="title"><?php print $network; ?></h4>
+                                <p class="category">25 last Transactions (Received)</p>
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-striped">
@@ -117,7 +117,7 @@
                                 </table>
                                 <p align="center">
                                     <?php
-                                    print "Your have <b>".$available_balance." ".$network."</b>
+                                    print "You have received <b>".$available_balance." ".$network."</b>
                                     in your wallet <b>".$walletUser."</b>";
                                     ?>
                                 </p>
@@ -126,6 +126,53 @@
                         </div>
                     </div>
 
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title"><?php print $network; ?></h4>
+                                <p class="category">25 last Transactions (Sent)</p>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <th>ReqId</th>
+                                        <th>Receiver</th>
+                                        <th>Amount</th>
+                                        <th>Network</th>
+                                        <th>Time</th>
+                                        <th>Status</th>
+                                    </thead>
+                                    <tbody>
+                                            <?php
+                                            parse_str(implode('&', array_slice($argv, 1)), $_GET);
+
+                                            $txs = $block_io->get_transactions(array(
+                                                'type' => 'sent',
+                                                'addresses' => $walletUser
+                                            ));
+
+                                            $txr = $txs;
+                                            $txd = $txs->data;
+                                            $txs = $txs->data->txs;
+
+                                            foreach($txs as $tx) {
+                                                foreach($tx->amounts_sent as $amountSent) {
+                                                    $sent_balance = array_count_values($amountSent->amount);
+                                                    print "<tr><td>".$tx->txid."</td>";
+                                                    print "<td>".$amountSent->recipient."</td>";
+                                                    print "<td>".$amountSent->amount."</td>";
+                                                    print "<td>".$txd->network."</td>";
+                                                    print "<td>".date('d/m/Y', $tx->time)."</td>";
+                                                    print "<td>".$txr->status."</td></tr>";
+                                                }
+                                            }
+                                            ?>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
