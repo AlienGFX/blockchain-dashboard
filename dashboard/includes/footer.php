@@ -18,6 +18,11 @@
                                Blockio
                             </a>
                         </li>
+                        <li>
+                            <a href="https://github.com/AlienGFX/blockchain-dashboard/">
+                               Contributions
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="copyright pull-right">
