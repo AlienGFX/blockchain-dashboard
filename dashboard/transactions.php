@@ -86,6 +86,7 @@
                                         <th>Senders</th>
                                         <th>Amount</th>
                                         <th>Network</th>
+                                        <th>Date</th>
                                         <th>Time</th>
                                         <th>Status</th>
                                     </thead>
@@ -106,9 +107,10 @@
                                                 foreach($tx->amounts_received as $amountReceived) {
                                                     print "<tr><td>".$tx->txid."</td>";
                                                     print "<td>".$tx->senders[0]."</td>";
-                                                    print "<td>".$amountReceived->amount."</td>";
-                                                    print "<td>".$txd->network."</td>";
+                                                    print "<td><b>".$amountReceived->amount."</b></td>";
+                                                    print "<td><b>".$txd->network."</b></td>";
                                                     print "<td>".date('d/m/Y', $tx->time)."</td>";
+                                                    print "<td>".date('H:i:s', $tx->time)."</td>";
                                                     print "<td>".$txr->status."</td></tr>";
                                                 }
                                             }
@@ -139,6 +141,7 @@
                                         <th>Receiver</th>
                                         <th>Amount</th>
                                         <th>Network</th>
+                                        <th>Date</th>
                                         <th>Time</th>
                                         <th>Status</th>
                                     </thead>
@@ -160,9 +163,10 @@
                                                     $sent_balance = array_count_values($amountSent->amount);
                                                     print "<tr><td>".$tx->txid."</td>";
                                                     print "<td>".$amountSent->recipient."</td>";
-                                                    print "<td>".$amountSent->amount."</td>";
-                                                    print "<td>".$txd->network."</td>";
+                                                    print "<td><b>".$amountSent->amount."</b></td>";
+                                                    print "<td><b>".$txd->network."</b></td>";
                                                     print "<td>".date('d/m/Y', $tx->time)."</td>";
+                                                    print "<td>".date('H:i:s', $tx->time)."</td>";
                                                     print "<td>".$txr->status."</td></tr>";
                                                 }
                                             }
