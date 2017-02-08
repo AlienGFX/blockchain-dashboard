@@ -41,4 +41,19 @@
                         <p>Support</p>
                     </a>
                 </li>
+
+		 <?php if(basename($page) == 'newwallet.php'){echo '<li class="active">'; }else { echo '<li>'; } ?>
+                    <a href="newwallet.php">
+                        <i class="ti-view-list-alt"></i>
+                        <p>New Wallet</p>
+                    </a>
+                </li>
+
+
+
+
+
+
+
+
             </ul>
