@@ -1,0 +1,76 @@
+{
+  "status" : "success",
+  "data" : {
+    "network" : "BTCTEST",
+    "txs" : [
+      {
+        "txid" : "85c6e5120156ca3c743f9aec01832d5530******************************",
+        "from_green_address" : false,
+        "time" : 1486208660,
+        "confirmations" : 386,
+        "amounts_received" : [
+          {
+            "recipient" : "2NCSsh2J2hkCkR1eo7yAnSC7g**********",
+            "amount" : "3.12500000"
+          }
+        ],
+        "senders" : [
+          "mn1JPQzA2rF4FWvVYdQumdxG**********"
+        ],
+        "confidence" : 1.0,
+        "propagated_by_nodes" : null
+      },
+      {
+        "txid" : "45cfab0235954f4546cf96ac9eedcc6316******************************",
+        "from_green_address" : false,
+        "time" : 1486109476,
+        "confirmations" : 508,
+        "amounts_received" : [
+          {
+            "recipient" : "2NCSsh2J2hkCkR1eo7yAnSC7g**********",
+            "amount" : "0.01586912"
+          }
+        ],
+        "senders" : [
+          "mqDhPcwgrV1sPXJT9mHy1awB**********"
+        ],
+        "confidence" : 1.0,
+        "propagated_by_nodes" : null
+      },
+      {
+        "txid" : "bca0984e6fad57b07d74fe47dbc205f777******************************",
+        "from_green_address" : false,
+        "time" : 1486109299,
+        "confirmations" : 508,
+        "amounts_received" : [
+          {
+            "recipient" : "2NCSsh2J2hkCkR1eo7yAnSC7g**********",
+            "amount" : "0.03173827"
+          }
+        ],
+        "senders" : [
+          "n3Q48cGqRJHs7haXvarYQVoG**********"
+        ],
+        "confidence" : 1.0,
+        "propagated_by_nodes" : null
+      },
+      {
+        "txid" : "7ddd65a33964cef8049d85df731429b490******************************",
+        "from_green_address" : false,
+        "time" : 1486109290,
+        "confirmations" : 508,
+        "amounts_received" : [
+          {
+            "recipient" : "2NCSsh2J2hkCkR1eo7yAnSC7g**********",
+            "amount" : "0.06347655"
+          }
+        ],
+        "senders" : [
+          "mm7cXKM7wNDmPhLShpc9C29X**********"
+        ],
+        "confidence" : 1.0,
+        "propagated_by_nodes" : null
+      }
+    ]
+  }
+}
