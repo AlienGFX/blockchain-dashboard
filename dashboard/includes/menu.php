@@ -26,7 +26,7 @@
                 <?php if(basename($page) == 'wallet.php'){echo '<li class="active">'; }else { echo '<li>'; } ?>
                     <a href="wallet.php">
                         <i class="ti-wallet"></i>
-                        <p>My wallet</p>
+                        <p>Create a wallet</p>
                     </a>
                 </li>
                 <?php if(basename($page) == 'maps.php'){echo '<li class="active">'; }else { echo '<li>'; } ?>
@@ -41,19 +41,4 @@
                         <p>Support</p>
                     </a>
                 </li>
-
-		 <?php if(basename($page) == 'newwallet.php'){echo '<li class="active">'; }else { echo '<li>'; } ?>
-                    <a href="newwallet.php">
-                        <i class="ti-view-list-alt"></i>
-                        <p>New Wallet</p>
-                    </a>
-                </li>
-
-
-
-
-
-
-
-
             </ul>
